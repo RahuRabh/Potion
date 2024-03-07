@@ -7,17 +7,23 @@ import { ChevronsLeft, MenuIcon, PlusCircle, Search, Plus, Settings, Trash } fro
 import { usePathname } from "next/navigation"
 import { ElementRef, useEffect, useRef, useState } from "react"
 import { useMediaQuery } from "usehooks-ts"
-import { useMutation, useQuery } from "convex/react"
+import { useMutation } from "convex/react"
 import { toast } from "sonner"
+
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { useSearch } from "@/hooks/use-search"
+import { useSettings } from "@/hooks/use-settings"
 
 import { UserItem } from "./user-item"
 import { Item } from "./item"
-
+import { DocumentList } from "./document-list"
+import { TrashBox } from "./trash-box"
 
 export const Navigation = () => {
+    const settings = useSettings()
+    const search = useSearch()
     const pathname = usePathname()
     const isMobile = useMediaQuery("(max-width: 768px")
-    const documents = useQuery(api.documents.get)
     const create = useMutation(api.documents.create)
 
     const isResizingRef = useRef(false)
@@ -128,12 +134,12 @@ export const Navigation = () => {
                 label="Search"
                 icon={Search}
                 isSearch
-                onClick={() => {}}
+                onClick={search.onOpen}
                 />
                 <Item 
                 label="Settings"
                 icon={Settings}
-                onClick={() => {}}
+                onClick={settings.onOpen}
                 />
                 <Item 
                 onClick={handleCreate} 
@@ -142,11 +148,24 @@ export const Navigation = () => {
                 />
             </div>
             <div className="mt-4">
-                {documents?.map((document) => (
-                    <p key={document._id}>{document.title}</p>
-                ))}
+                <DocumentList />
+                <Item
+                onClick={handleCreate}
+                icon={Plus}
+                label="Add a page"
+                />
+                <Popover>
+                    <PopoverTrigger>
+                        <Item label="Trash" icon={Trash}/>
+                    </PopoverTrigger>
+                    <PopoverContent className="p-0 w-72"
+                        side={isMobile ? "bottom" : "right"}
+                    >
+                        <TrashBox />
+                    </PopoverContent>
+                </Popover>
             </div>
-            <div 
+            <div
             onMouseDown={handleMouseDown}
             onClick={resetWidth}
             className="opacity-0 group-hover/sidebar:opacity-100 transition cursor-ew-resize absolute h-full w-1 bg-primary/10 right-0 top-0" />
