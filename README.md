@@ -24,14 +24,13 @@ Potion is a productivity tool inspired by Notion, offering users a platform to o
 
 ## Screenshots
 
-- ![image](https://github.com/RahuRabh/Potion/assets/63224718/b4a0b1c2-81b6-42e2-bee4-9ec780af54d6)
+>![image](https://github.com/RahuRabh/Potion/assets/63224718/b4a0b1c2-81b6-42e2-bee4-9ec780af54d6)
 
+![image](https://github.com/RahuRabh/Potion/assets/63224718/b80c9d95-dae9-48eb-a06b-96e96ce6b3c8)
 
-- ![image](https://github.com/RahuRabh/Potion/assets/63224718/b80c9d95-dae9-48eb-a06b-96e96ce6b3c8)
+>![image](https://github.com/RahuRabh/Potion/assets/63224718/50711803-0e3e-48c5-8478-b467a2cdc6a2)
 
-- ![image](https://github.com/RahuRabh/Potion/assets/63224718/50711803-0e3e-48c5-8478-b467a2cdc6a2)
-
-- ![image](https://github.com/RahuRabh/Potion/assets/63224718/fdb8a30e-beac-4077-9897-5bd8b6ed7591)
+![image](https://github.com/RahuRabh/Potion/assets/63224718/fdb8a30e-beac-4077-9897-5bd8b6ed7591)
 
 
 ## Getting Started
