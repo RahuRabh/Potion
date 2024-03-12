@@ -6,11 +6,11 @@ Potion is a productivity tool inspired by Notion, offering users a platform to o
 
 **Authentication Integration**: Potion seamlessly integrates with popular authentication providers like Google and GitHub, ensuring a secure and hassle-free login experience for users.
 
-- **Flexible Page Creation**: Users can create pages effortlessly and organize them into a hierarchical structure, allowing for efficient categorization and management of notes and ideas.
+**Flexible Page Creation**: Users can create pages effortlessly and organize them into a hierarchical structure, allowing for efficient categorization and management of notes and ideas.
 
-- **Quote API**: The game integrates the Advice Slip API to display a new inspirational quote every minute.
+**Quote API**: The game integrates the Advice Slip API to display a new inspirational quote every minute.
 
-- **Publishing and Sharing**: Completed notes can be easily published and shared as a preview, enabling users to disseminate information effectively within and outside their organization.
+**Publishing and Sharing**: Completed notes can be easily published and shared as a preview, enabling users to disseminate information effectively within and outside their organization.
 
 
 ## Technologies Used
@@ -24,13 +24,14 @@ Potion is a productivity tool inspired by Notion, offering users a platform to o
 
 ## Screenshots
 
-![image](https://github.com/RahuRabh/Potion/assets/63224718/b4a0b1c2-81b6-42e2-bee4-9ec780af54d6)
+- ![image](https://github.com/RahuRabh/Potion/assets/63224718/b4a0b1c2-81b6-42e2-bee4-9ec780af54d6)
 
-![image](https://github.com/RahuRabh/Potion/assets/63224718/b80c9d95-dae9-48eb-a06b-96e96ce6b3c8)
 
-![image](https://github.com/RahuRabh/Potion/assets/63224718/50711803-0e3e-48c5-8478-b467a2cdc6a2)
+- ![image](https://github.com/RahuRabh/Potion/assets/63224718/b80c9d95-dae9-48eb-a06b-96e96ce6b3c8)
 
-![image](https://github.com/RahuRabh/Potion/assets/63224718/fdb8a30e-beac-4077-9897-5bd8b6ed7591)
+- ![image](https://github.com/RahuRabh/Potion/assets/63224718/50711803-0e3e-48c5-8478-b467a2cdc6a2)
+
+- ![image](https://github.com/RahuRabh/Potion/assets/63224718/fdb8a30e-beac-4077-9897-5bd8b6ed7591)
 
 
 ## Getting Started
