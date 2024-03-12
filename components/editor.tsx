@@ -16,20 +16,28 @@ interface EditorProps {
   editable?: boolean;
 }
 
-export const Editor = ({ 
+const Editor = ({ 
     onChange,  
     initialContent, 
     editable 
 } : EditorProps ) => {
     
     const { resolvedTheme} = useTheme()
+    const { edgestore } = useEdgeStore()
+    const handleUpload = async (file: File) => {
+        const response = await edgestore.publicFiles.upload({
+            file
+        })
+        return response.url
+    }
 
     const editor: BlockNoteEditor = useCreateBlockNote({
         editable,
         initialContent: initialContent ? JSON.parse(initialContent) as PartialBlock[] : undefined,
         onEditorConentChange: (editor) => {
             onChange(JSON.stringify(editor.topLevelBlocks, null, 2))
-        }
+        },
+        uploadFile: handleUpload
     })
   return (
   <div>
@@ -38,17 +46,4 @@ export const Editor = ({
   );
 };
 
-
-// export const Editor = ({
-//     onChange, 
-//     initialContent,
-//     editable
-// }: EditorProps) => {
-//     const editor : BlockNoteEditor = useCreateBlockNote({
-//         editable,
-
-//     })
-//     return (
-//         <div>Editor</div>
-//     )
-// }
+export default Editor
